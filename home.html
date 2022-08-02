@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Food Factory</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <hr>
+        <h1>Food Factory</h1>
+        <button class="btn btn-primary" data-toggle="modal" 
+        data-target="#restaurentModal">  Add Restaurent</button>
+        <hr>
+        
+        <div>
+            <div class="row" id="books">
+            </div>
+        </div>
+    </div>
+
+    <div id="restaurentModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Restaurent</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                        <form action="http://localhost:3000/book" method="POST">
+
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Restaurent No</label>
+                            <input class="form-control" name="resid">
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Restaurent Name</label>
+                            <input class="form-control" name="restaurent">
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Item 1</label>
+                            <input class="form-control" name="item1">
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Item 2</label>
+                            <input class="form-control" name="item2">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Item 3</label>
+                            <input class="form-control" name="item3">
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Item 4</label>
+                            <input class="form-control" name="item4">
+                        </div>
+            
+    
+            
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="editBookModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Book</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                        <form id="editForm" method="POST">
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Restaurent No</label>
+                                <input class="form-control" name="resid" id="resid">
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Restaurent Name</label>
+                                <input class="form-control" name="restaurent" id="restaurent">
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Item 1</label>
+                                <input class="form-control" name="item1" id="item1">
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Item 2</label>
+                                <input class="form-control" name="item2" id="item2">
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Item 3</label>
+                                <input class="form-control" name="item3" id="item3">
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Item 4</label>
+                                <input class="form-control" name="item4" id="item4">
+                            </div>
+                
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="book-list.js"></script>
+</body>
+
+</html>
